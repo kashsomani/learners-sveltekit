@@ -6,7 +6,7 @@ const config = {
   },
   daisyui: {
     themes: [
-      "luxury"
+      "garden"
     ],
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
