@@ -1,12 +1,12 @@
 <script>
-    import logo from "$lib/assets/old_logo.png";
+    import Carousel from "./_components/carousel.svelte";
 </script>
 
 <div class="hero min-h-screen bg-base-200">
     <div class="hero-content text-center">
         <div class="max-w-md">
             <div class="grid grid-cols-1 place-items-center">
-                <img src={logo} alt="logo" width="50%" />
+                <img src="/assets/old_logo.png" alt="logo" width="50%" />
             </div>
             <h1 class="text-5xl font-bold text-primary">Learners' Academy</h1>
             <p class="py-6">
@@ -21,7 +21,10 @@
                 in various industries such as medicine, engineering, technology
                 and many more
             </p>
-            <button class="btn btn-primary">Get Started</button>
+            <!-- maybe add something like this in future -->
+            <!-- <button class="btn btn-primary">Get Started</button> -->
         </div>
     </div>
 </div>
+
+<Carousel />

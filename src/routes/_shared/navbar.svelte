@@ -1,7 +1,3 @@
-<script>
-    import logo from "$lib/assets/logo.png";
-</script>
-
 <div class="navbar bg-base-100 sticky top-0 z-20">
     <div class="navbar-start">
         <div class="dropdown">
