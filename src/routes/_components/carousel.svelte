@@ -15,11 +15,14 @@
             {/each}
         </div>
         <div class="flex justify-center w-full py-2 gap-2">
-            {#each images as image}
-                <a href="#slidshow-image-{image.id}" class="btn btn-xs"
-                    >{image.id + 1}</a
-                >
-            {/each}
+            <div class="btn-group">
+                {#each images as image}
+                    <a
+                        class="btn btn-lg btn-active"
+                        href="#slidshow-image-{image.id}">{image.id + 1}</a
+                    >
+                {/each}
+            </div>
         </div>
     </div>
 </div>
