@@ -18,11 +18,13 @@
             </label>
             <ul
                 tabindex="0"
-                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-lime-100 rounded-box w-52"
             >
-                <li><a>Homepage</a></li>
-                <li><a>Portfolio</a></li>
-                <li><a>About</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/activities">Activities</a></li>
+                <li><a href="/teachers">Teachers</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a href="/curriculum">Curriculum</a></li>
             </ul>
         </div>
     </div>

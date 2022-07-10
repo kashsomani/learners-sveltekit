@@ -2,9 +2,6 @@
     import { images } from "./carousel-data";
     import { goto } from "$app/navigation";
 
-    function routeToPage(route, replaceState) {
-        goto(`/${route}`, { replaceState });
-    }
     let currentIndex = 0;
 </script>
 
@@ -16,26 +13,29 @@
                     <div class="carousel w-full">
                         {#each images as image}
                             <div
-                                id="slidshow-image-{image.id}"
-                                class="carousel-item w-full grid grid-cols-1 place-items-center"
+                                id="slide-{image.id}"
+                                class="carousel-item relative w-full"
                             >
-                                <img src={image.src} class="w-3/4 rounded-lg" />
+                                <img src={image.src} class="w-full" />
+                                <div
+                                    class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                                >
+                                    <a
+                                        href="#slide-{image.id - 1 >= 0
+                                            ? image.id - 1
+                                            : images.length - 1}"
+                                        class="btn btn-circle">❮</a
+                                    >
+                                    <a
+                                        href="#slide-{image.id + 1 <
+                                        images.length
+                                            ? image.id + 1
+                                            : 0}"
+                                        class="btn btn-circle">❯</a
+                                    >
+                                </div>
                             </div>
                         {/each}
-                    </div>
-                    <div class="flex justify-center w-full py-2 ">
-                        <div class="btn-group">
-                            {#each images as image}
-                                <a
-                                    class="btn btn-lg {currentIndex === image.id
-                                        ? 'btn-active'
-                                        : ''}"
-                                    href="#slidshow-image-{image.id}"
-                                    on:click={() => (currentIndex = image.id)}
-                                    >{image.id + 1}</a
-                                >
-                            {/each}
-                        </div>
                     </div>
                 </div>
             </div>
