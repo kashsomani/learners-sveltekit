@@ -15,7 +15,7 @@ const config = {
 
           "accent": "#FAE5E5",
 
-          "neutral": "#5D5656",
+          "neutral": "#535A3F",
 
           "base-100": "#E9E7E7",
 
